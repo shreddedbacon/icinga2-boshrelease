@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SSL_DIR=/var/vcap/store/icinga2/etcapachessl
+if [ ! -d ${SSL_DIR} ]
+then
+  mkdir -p ${SSL_DIR}
+fi
+
+cp /var/vcap/jobs/icinga2/config/icinga2.* ${SSL_DIR}/.
